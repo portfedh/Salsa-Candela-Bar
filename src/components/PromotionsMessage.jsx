@@ -1,7 +1,8 @@
 import "./PromotionsMessage.css";
 import LogoIcon from "./LogoIcon";
+import PropTypes from "prop-types";
 
-function PromotionsMessage() {
+function PromotionsMessage({ onNext }) {
   return (
     <div className="promotions-container">
       <div className="promotions-card">
@@ -33,10 +34,16 @@ function PromotionsMessage() {
           Los precios se ajustan automáticamente al finalizar la compra.
         </p>
 
-        <button className="next-button">Siguiente</button>
+        <button className="next-button" onClick={onNext}>
+          Siguiente
+        </button>
       </div>
     </div>
   );
 }
+
+PromotionsMessage.propTypes = {
+  onNext: PropTypes.func.isRequired,
+};
 
 export default PromotionsMessage;
