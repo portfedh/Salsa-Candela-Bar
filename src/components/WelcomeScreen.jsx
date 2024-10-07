@@ -1,20 +1,17 @@
-import Logo from "./Logo";
-import WelcomeMessage from "./WelcomeMessage";
-import NextButton from "./NextButton";
+import "./WelcomeScreen.css";
 
 function WelcomeScreen() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      <Logo />
-      <WelcomeMessage />
-      <NextButton />
+    <div className="welcome-container">
+      <div className="welcome-card">
+        <div className="logo">
+          <img src="logo.png" alt="Salsa Candela Logo" />
+        </div>
+        <div className="welcome-content">
+          <h1 className="welcome-message">Bienvenid@ a Salsa Candela!</h1>
+        </div>
+        <button className="next-button">Siguiente</button>
+      </div>
     </div>
   );
 }

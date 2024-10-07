@@ -7,7 +7,7 @@ function NextButton() {
         border: "none",
         padding: ".5rem 5.5rem",
         fontSize: "1rem",
-        fontWeight: "bold",
+        fontWeight: "700",
         borderRadius: "20px",
       }}
     >
