@@ -36,7 +36,7 @@ html {
   margin-bottom: 2rem;
 }
 
-.logo img {
+.logo-welcome {
   max-height: 100px;
   margin-bottom: 6rem;
 }
@@ -49,8 +49,8 @@ html {
 }
 
 .welcome-message {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 6rem;
 }

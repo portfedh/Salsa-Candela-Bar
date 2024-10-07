@@ -32,13 +32,19 @@ html {
 .logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+}
+
+.logo-image {
+  max-height: 100px;
+  margin-bottom: 2rem;
 }
 
 .promotions-heading {
   font-size: 1.2rem;
   text-align: center;
   margin: 0 0 1rem;
+  font-weight: 600;
 }
 
 .promotions-content {
@@ -69,9 +75,10 @@ html {
 }
 
 .promotions-description {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: center;
   margin: 1rem 0;
+  padding: 0 0.6rem;
 }
 
 .next-button {
@@ -83,6 +90,7 @@ html {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-bottom: 1rem;
 }
 
 .next-button:hover {

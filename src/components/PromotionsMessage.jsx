@@ -1,5 +1,4 @@
 import "./PromotionsMessage.css";
-import LogoIcon from "./LogoIcon";
 import PropTypes from "prop-types";
 
 function PromotionsMessage({ onNext }) {
@@ -7,7 +6,7 @@ function PromotionsMessage({ onNext }) {
     <div className="promotions-container">
       <div className="promotions-card">
         <div className="logo">
-          <LogoIcon />
+          <img className="logo-image" src="logo.png" alt="Salsa Candela Logo" />
         </div>
         <h1 className="promotions-heading">Estas son nuestras promociones:</h1>
 
