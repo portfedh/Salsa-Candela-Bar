@@ -1,0 +1,34 @@
+.menu-item {
+  width: 40%;
+  position: relative;
+  display: flex;
+
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin: 0.5rem;
+  padding: 10px; /* Add some padding */
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #fe491e;
+}
+
+.menu-item p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.menu-item button {
+  margin-top: 10px;
+  background-color: #fe491e;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+}
