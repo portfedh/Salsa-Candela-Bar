@@ -17,9 +17,150 @@ const menuData = {
       imageUrl: "https://via.placeholder.com/120",
     },
   ],
-  jugo: [],
-  refresco: [],
-  cerveza: [],
+  jugo: [
+    {
+      itemName: "Jugo Naranja",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Jugo Manzana",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Jugo Uva",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Jugo Mango",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Jugo Piña",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Jugo Durazno",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Jugo Piña Coco",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+  ],
+  refresco: [
+    {
+      itemName: "Coca Cola",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Sprite",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Squirt",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Manzanita",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Coca Cola",
+      price: 30,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+  ],
+  cerveza: [
+    {
+      itemName: "Heineken",
+      price: 50,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Corona",
+      price: 50,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Victoria",
+      price: 50,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+  ],
+  vodka: [
+    {
+      itemName: "Vodka y Coca",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Azulito",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Desarmador",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+  ],
+  whiskey: [
+    {
+      itemName: "Whiskey y Coca",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Whiskey y Refresco Manzanza",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Whiskey Agua Mineral",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+  ],
+  ron: [
+    {
+      itemName: "Ron y Coca",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Mojito",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Mojito Mango",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+    {
+      itemName: "Piña Colada",
+      price: 100,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+  ],
+  botanas: [
+    {
+      itemName: "Chicharrones",
+      price: 20,
+      imageUrl: "https://via.placeholder.com/120",
+    },
+  ],
 };
 
 function Menu() {
@@ -98,60 +239,25 @@ function Menu() {
         </button>
 
         <div className="menu-content">
-          <div className="menu-section">
-            <h2 id="agua-section" className="menu-title">
-              Agua
-            </h2>
-            <div className="menu-items">
-              <MenuItem
-                itemName="Agua"
-                price={20}
-                imageUrl="https://via.placeholder.com/120"
-                onAddToCart={addToCart}
-              />
-              <MenuItem
-                itemName="Agua Mineral"
-                price={30}
-                imageUrl="https://via.placeholder.com/120"
-                onAddToCart={addToCart}
-              />
-            </div>
-          </div>
-
-          <div className="menu-section">
-            <h2 id="jugo-section" className="menu-title">
-              Jugo
-            </h2>
-          </div>
-
-          <div className="menu-section">
-            <h2 id="refresco-section" className="menu-title">
-              Refresco
-            </h2>
-          </div>
-
-          <div className="menu-section">
-            <h2 id="cerveza-section" className="menu-title">
-              Cerveza
-            </h2>
-          </div>
-
-          <div className="menu-section">
-            <h2 id="cocteles-section" className="menu-title">
-              Cócteles
-            </h2>
-          </div>
-
-          <div className="menu-section">
-            <h2 id="mocteles-section" className="menu-title">
-              Mocteles
-            </h2>
-          </div>
-
-          <div className="menu-section">
-            <h2 id="botanas-section" className="menu-title">
-              Botanas
-            </h2>
+          <div>
+            {Object.keys(menuData).map((section) => (
+              <div key={section} className="menu-section">
+                <h2 id={`${section}-section`} className="menu-title">
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </h2>
+                <div className="menu-items">
+                  {menuData[section].map((item, index) => (
+                    <MenuItem
+                      key={index}
+                      itemName={item.itemName}
+                      price={item.price}
+                      imageUrl={item.imageUrl}
+                      onAddToCart={addToCart}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
