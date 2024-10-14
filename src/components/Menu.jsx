@@ -9,11 +9,13 @@ const menuData = {
     {
       itemName: "Agua",
       price: 20,
+      amount: "473ml",
       imageUrl: "/img/ciel-240x240.jpg",
     },
     {
       itemName: "Agua Mineral",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/penafiel-240x240.webp",
     },
   ],
@@ -21,36 +23,43 @@ const menuData = {
     {
       itemName: "Jugo Naranja",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/jumex-naranja-240x240.jpg",
     },
     {
       itemName: "Jugo Manzana",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/jumex-manzana-240x240.jpg",
     },
     {
       itemName: "Jugo Uva",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/jumex-uva-240x240.jpg",
     },
     {
       itemName: "Jugo Mango",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/jumex-mango-240x240.jpg",
     },
     {
       itemName: "Jugo Piña",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/jumex-pina-240x240.jpg",
     },
     {
       itemName: "Jugo Durazno",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/jumex-durazno-240x240.jpg",
     },
     {
       itemName: "Jugo Piña Coco",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/jumex-pina-coco-240x240.jpg",
     },
   ],
@@ -58,21 +67,25 @@ const menuData = {
     {
       itemName: "Coca Cola",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/coca-cola-240x240.webp",
     },
     {
       itemName: "Sprite",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/sprite-240x240.webp",
     },
     {
       itemName: "Squirt",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/squirt-240x240.webp",
     },
     {
       itemName: "Manzanita",
       price: 30,
+      amount: "473ml",
       imageUrl: "/img/manzanita-240x240.jpg",
     },
   ],
@@ -80,16 +93,19 @@ const menuData = {
     {
       itemName: "Heineken",
       price: 50,
+      amount: "473ml",
       imageUrl: "/img/heineken-240x240.webp",
     },
     {
       itemName: "Corona",
       price: 50,
+      amount: "473ml",
       imageUrl: "/img/corona-240x240.webp",
     },
     {
       itemName: "Victoria",
       price: 50,
+      amount: "473ml",
       imageUrl: "/img/victoria-240x240.webp",
     },
   ],
@@ -97,16 +113,19 @@ const menuData = {
     {
       itemName: "Vodka y Coca",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/vodka-coca-240x240.webp",
     },
     {
       itemName: "Azulito",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/azulito-240x240.webp",
     },
     {
       itemName: "Desarmador",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/vodka-jugo-240x240.webp",
     },
   ],
@@ -114,16 +133,19 @@ const menuData = {
     {
       itemName: "Whiskey y Coca",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/whiskey-coca-240x240.webp",
     },
     {
       itemName: "Whiskey y Refresco Manzanza",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/whiskey-manzana-240x240.webp",
     },
     {
       itemName: "Whiskey Agua Mineral",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/whiskey-agua-240x240.webp",
     },
   ],
@@ -131,21 +153,25 @@ const menuData = {
     {
       itemName: "Ron y Coca",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/ron-coca-240x240.webp",
     },
     {
       itemName: "Mojito",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/mojito-240x240.webp",
     },
     {
       itemName: "Mojito Mango",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/mojito-mango-240x240.webp",
     },
     {
       itemName: "Piña Colada",
       price: 100,
+      amount: "473ml",
       imageUrl: "/img/pina-colada-240x240.webp",
     },
   ],
@@ -153,6 +179,7 @@ const menuData = {
     {
       itemName: "Chicharrones",
       price: 20,
+      amount: "473ml",
       imageUrl: "/img/chicharron-240x240.png",
     },
   ],
@@ -246,6 +273,7 @@ function Menu() {
                       key={index}
                       itemName={item.itemName}
                       price={item.price}
+                      amount={item.amount}
                       imageUrl={item.imageUrl}
                       onAddToCart={addToCart}
                     />
