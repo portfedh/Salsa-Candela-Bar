@@ -9,156 +9,151 @@ const menuData = {
     {
       itemName: "Agua",
       price: 20,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/ciel-240x240.jpg",
     },
     {
       itemName: "Agua Mineral",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/penafiel-240x240.webp",
     },
   ],
   jugo: [
     {
       itemName: "Jugo Naranja",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/jumex-naranja-240x240.jpg",
     },
     {
       itemName: "Jugo Manzana",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/jumex-manzana-240x240.jpg",
     },
     {
       itemName: "Jugo Uva",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/jumex-uva-240x240.jpg",
     },
     {
       itemName: "Jugo Mango",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/jumex-mango-240x240.jpg",
     },
     {
       itemName: "Jugo Piña",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/jumex-pina-240x240.jpg",
     },
     {
       itemName: "Jugo Durazno",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/jumex-durazno-240x240.jpg",
     },
     {
       itemName: "Jugo Piña Coco",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/jumex-pina-coco-240x240.jpg",
     },
   ],
   refresco: [
     {
       itemName: "Coca Cola",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/coca-cola-240x240.webp",
     },
     {
       itemName: "Sprite",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/sprite-240x240.webp",
     },
     {
       itemName: "Squirt",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/squirt-240x240.webp",
     },
     {
       itemName: "Manzanita",
       price: 30,
-      imageUrl: "https://via.placeholder.com/120",
-    },
-    {
-      itemName: "Coca Cola",
-      price: 30,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/manzanita-240x240.jpg",
     },
   ],
   cerveza: [
     {
       itemName: "Heineken",
       price: 50,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/heineken-240x240.webp",
     },
     {
       itemName: "Corona",
       price: 50,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/corona-240x240.webp",
     },
     {
       itemName: "Victoria",
       price: 50,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/victoria-240x240.webp",
     },
   ],
   vodka: [
     {
       itemName: "Vodka y Coca",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/vodka-coca-240x240.webp",
     },
     {
       itemName: "Azulito",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/azulito-240x240.webp",
     },
     {
       itemName: "Desarmador",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/vodka-jugo-240x240.webp",
     },
   ],
   whiskey: [
     {
       itemName: "Whiskey y Coca",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/whiskey-coca-240x240.webp",
     },
     {
       itemName: "Whiskey y Refresco Manzanza",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/whiskey-manzana-240x240.webp",
     },
     {
       itemName: "Whiskey Agua Mineral",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/whiskey-agua-240x240.webp",
     },
   ],
   ron: [
     {
       itemName: "Ron y Coca",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/ron-coca-240x240.webp",
     },
     {
       itemName: "Mojito",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/mojito-240x240.webp",
     },
     {
       itemName: "Mojito Mango",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/mojito-mango-240x240.webp",
     },
     {
       itemName: "Piña Colada",
       price: 100,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/pina-colada-240x240.webp",
     },
   ],
   botanas: [
     {
       itemName: "Chicharrones",
       price: 20,
-      imageUrl: "https://via.placeholder.com/120",
+      imageUrl: "/img/chicharron-240x240.png",
     },
   ],
 };
