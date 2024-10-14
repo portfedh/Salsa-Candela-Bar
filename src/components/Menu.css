@@ -11,6 +11,11 @@ html {
   align-items: center;
   padding: 1rem;
   box-sizing: border-box;
+  /* Fix header to top */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
 }
 
 .menu-container {
