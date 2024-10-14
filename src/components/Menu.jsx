@@ -197,7 +197,16 @@ function Menu() {
   };
 
   const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+    const menuHeadingHeight =
+      document.querySelector(".menu-heading").offsetHeight;
+    const menuTitleHeight = document.querySelector(".menu-title").offsetHeight;
+    const offset = menuHeadingHeight + menuTitleHeight + 30;
+
+    window.scrollTo({
+      top: element.offsetTop - offset,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -218,55 +227,77 @@ function Menu() {
           </h1>
           <CartIcon cartCount={cartItems} />
         </div>
+        <div className="menu-categories">
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("aguas-section")}
+          >
+            Aguas $20
+          </button>
 
-        <button
-          className="category-button"
-          onClick={() => scrollToSection("aguas-section")}
-        >
-          Aguas $20
-        </button>
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("jugos-section")}
+          >
+            Jugos $30
+          </button>
 
-        <button
-          className="category-button"
-          onClick={() => scrollToSection("jugos-section")}
-        >
-          Jugos $30
-        </button>
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("refrescos-section")}
+          >
+            Refrescos $30
+          </button>
 
-        <button
-          className="category-button"
-          onClick={() => scrollToSection("refrescos-section")}
-        >
-          Refrescos $30
-        </button>
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("cervezas-section")}
+          >
+            Cervezas $50
+          </button>
 
-        <button
-          className="category-button"
-          onClick={() => scrollToSection("cervezas-section")}
-        >
-          Cervezas $50
-        </button>
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("vodka-section")}
+          >
+            Vodka $100
+          </button>
 
-        <button
-          className="category-button"
-          onClick={() => scrollToSection("cocteles-section")}
-        >
-          Cócteles $100
-        </button>
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("ron-section")}
+          >
+            Ron $100
+          </button>
 
-        <button
-          className="category-button"
-          onClick={() => scrollToSection("mocteles-section")}
-        >
-          Mocteles $50
-        </button>
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("tequila-section")}
+          >
+            Tequila $100
+          </button>
 
-        <button
-          className="category-button"
-          onClick={() => scrollToSection("botanas-section")}
-        >
-          Botanas $20
-        </button>
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("whiskey-section")}
+          >
+            Whiskey $100
+          </button>
+
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("mocteles-section")}
+          >
+            Mocteles $50
+          </button>
+
+          <button
+            className="category-button"
+            onClick={() => scrollToSection("botanas-section")}
+          >
+            Botanas $20
+          </button>
+        </div>
 
         <div className="menu-content">
           <div>
