@@ -5,7 +5,7 @@ import MenuItem from "./MenuItem";
 import PropTypes from "prop-types";
 
 const menuData = {
-  agua: [
+  aguas: [
     {
       itemName: "Agua",
       price: 20,
@@ -19,7 +19,7 @@ const menuData = {
       imageUrl: "/img/penafiel-240x240.webp",
     },
   ],
-  jugo: [
+  jugos: [
     {
       itemName: "Jugo Naranja",
       price: 30,
@@ -63,7 +63,7 @@ const menuData = {
       imageUrl: "/img/jumex-pina-coco-240x240.jpg",
     },
   ],
-  refresco: [
+  refrescos: [
     {
       itemName: "Coca Cola",
       price: 30,
@@ -89,7 +89,7 @@ const menuData = {
       imageUrl: "/img/manzanita-240x240.jpg",
     },
   ],
-  cerveza: [
+  cervezas: [
     {
       itemName: "Heineken",
       price: 50,
@@ -213,30 +213,30 @@ function Menu() {
 
         <button
           className="category-button"
-          onClick={() => scrollToSection("agua-section")}
+          onClick={() => scrollToSection("aguas-section")}
         >
-          Agua $20
+          Aguas $20
         </button>
 
         <button
           className="category-button"
-          onClick={() => scrollToSection("jugo-section")}
+          onClick={() => scrollToSection("jugos-section")}
         >
           Jugos $30
         </button>
 
         <button
           className="category-button"
-          onClick={() => scrollToSection("refresco-section")}
+          onClick={() => scrollToSection("refrescos-section")}
         >
-          Refresco $30
+          Refrescos $30
         </button>
 
         <button
           className="category-button"
-          onClick={() => scrollToSection("cerveza-section")}
+          onClick={() => scrollToSection("cervezas-section")}
         >
-          Cerveza $50
+          Cervezas $50
         </button>
 
         <button

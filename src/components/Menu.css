@@ -80,6 +80,12 @@ html {
   font-size: 1rem;
   font-weight: 500;
   margin: 0 0 0.5rem 1rem;
+  /* Sticky Titles */
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 98px; /* Adjust this value based on the height of your header */
+  background-color: white;
+  z-index: 5;
 }
 
 .category-button {
