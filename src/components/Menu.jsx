@@ -192,6 +192,10 @@ function Menu() {
     setCartItems(cartItems + 1);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
   };
@@ -207,7 +211,11 @@ function Menu() {
               alt="Salsa Candela Logo"
             />
           </div>
-          <h1 className="menu-heading">Menu</h1>
+          <h1 className="menu-heading">
+            <a href="#" onClick={scrollToTop}>
+              Menu
+            </a>
+          </h1>
           <CartIcon cartCount={cartItems} />
         </div>
 
