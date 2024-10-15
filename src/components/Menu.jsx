@@ -3,6 +3,8 @@ import { useState } from "react";
 import CartIcon from "./CartIcon";
 import MenuItem from "./MenuItem";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const menuData = {
   aguas: [
@@ -123,7 +125,7 @@ const menuData = {
       imageUrl: "/img/azulito-240x240.webp",
     },
     {
-      itemName: "Desarmador",
+      itemName: "Vodka y Jugo",
       price: 100,
       amount: "473ml",
       imageUrl: "/img/vodka-jugo-240x240.webp",
@@ -305,6 +307,13 @@ function Menu() {
               <div key={section} className="menu-section">
                 <h2 id={`${section}-section`} className="menu-title">
                   {section.charAt(0).toUpperCase() + section.slice(1)}
+                  <a
+                    href="#"
+                    onClick={scrollToTop}
+                    className="scroll-to-top-icon"
+                  >
+                    <FontAwesomeIcon icon={faChevronUp} />
+                  </a>
                 </h2>
                 <div className="menu-items">
                   {menuData[section].map((item, index) => (
