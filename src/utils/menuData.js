@@ -123,26 +123,6 @@ const menuData = {
       imageUrl: "/img/vodka-jugo-240x240.webp",
     },
   ],
-  whiskey: [
-    {
-      itemName: "Whiskey y Coca",
-      price: 100,
-      amount: "473ml",
-      imageUrl: "/img/whiskey-coca-240x240.webp",
-    },
-    {
-      itemName: "Whiskey y Refresco Manzanza",
-      price: 100,
-      amount: "473ml",
-      imageUrl: "/img/whiskey-manzana-240x240.webp",
-    },
-    {
-      itemName: "Whiskey Agua Mineral",
-      price: 100,
-      amount: "473ml",
-      imageUrl: "/img/whiskey-agua-240x240.webp",
-    },
-  ],
   ron: [
     {
       itemName: "Ron y Coca",
@@ -167,6 +147,72 @@ const menuData = {
       price: 100,
       amount: "473ml",
       imageUrl: "/img/pina-colada-240x240.webp",
+    },
+  ],
+  tequila: [
+    {
+      itemName: "Tequila y Coca",
+      price: 100,
+      amount: "473ml",
+      imageUrl: "/img/tequila-coca-240x240.webp",
+    },
+    {
+      itemName: "Tequila Squirt",
+      price: 100,
+      amount: "473ml",
+      imageUrl: "/img/tequila-squirt-240x240.webp",
+    },
+    {
+      itemName: "Tequila Jugo Naranja y Toronja",
+      price: 100,
+      amount: "473ml",
+      imageUrl: "/img/tequila-squirt-naranja-240x240.webp",
+    },
+  ],
+  whiskey: [
+    {
+      itemName: "Whiskey y Coca-Cola",
+      price: 100,
+      amount: "473ml",
+      imageUrl: "/img/whiskey-coca-240x240.webp",
+    },
+    {
+      itemName: "Whiskey y Manzana",
+      price: 100,
+      amount: "473ml",
+      imageUrl: "/img/whiskey-manzana-240x240.webp",
+    },
+    {
+      itemName: "Whiskey y Agua Mineral",
+      price: 100,
+      amount: "473ml",
+      imageUrl: "/img/whiskey-agua-240x240.webp",
+    },
+  ],
+  mocteles: [
+    {
+      itemName: "Agua Mineral, Limón y Sal",
+      price: 50,
+      amount: "473ml",
+      imageUrl: "/img/agua-mineral-limon-sal-240x240.jpg",
+    },
+    {
+      itemName: "Agua Mineral y Jugo",
+      price: 50,
+      amount: "473ml",
+      imageUrl: "/img/agua-mineral-jugo-240x240.png",
+    },
+    {
+      itemName: "Mojito Sin Alcohol",
+      price: 50,
+      amount: "473ml",
+      imageUrl: "/img/mojito-240x240.webp",
+    },
+    {
+      itemName: "Azulito Sin Alcohol",
+      price: 50,
+      amount: "473ml",
+      imageUrl: "/img/azulito-240x240.webp",
     },
   ],
   botanas: [
