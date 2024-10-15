@@ -153,7 +153,7 @@ function Menu() {
         </div>
 
         <div className="go-to-cart">
-          <button className="go-to-cart-button" onClick={scrollToTop}>
+          <button className="go-to-cart-button" onClick={addToCart}>
             Ir a carrito
           </button>
         </div>
