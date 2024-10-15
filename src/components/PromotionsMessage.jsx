@@ -33,6 +33,11 @@ function PromotionsMessage({ onNext }) {
           Los precios se ajustan automáticamente al finalizar la compra.
         </p>
 
+        <p className="promotions-description">
+          Las bebidas se sirven en vasos de 473ml. <br />
+          Las imágenes son ilustrativas.
+        </p>
+
         <button className="next-button" onClick={onNext}>
           Siguiente
         </button>
