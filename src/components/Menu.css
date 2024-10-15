@@ -145,6 +145,14 @@ html {
   background-color: #f57c00;
 }
 
+.go-to-cart-button:active {
+  background-color: #d84315; /* Adjust to a suitable active color */
+}
+
+.category-button:active {
+  background-color: #d84315; /* Adjust to a suitable active color */
+}
+
 .scroll-to-top-icon {
   margin-left: 0.5rem;
   color: inherit;
