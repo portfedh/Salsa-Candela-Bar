@@ -116,8 +116,9 @@ html {
   flex: 1 1 calc(50% - 1rem); /* 50% minus the gap */
 }
 
-.category-button:hover {
-  background-color: #f57c00;
+.category-button:active {
+  background-color: #d84315;
+  /* background-color: #f57c00; */
 }
 
 .go-to-cart {
@@ -141,16 +142,8 @@ html {
   margin: 1rem;
 }
 
-.go-to-cart-button:hover {
-  background-color: #f57c00;
-}
-
 .go-to-cart-button:active {
-  background-color: #d84315; /* Adjust to a suitable active color */
-}
-
-.category-button:active {
-  background-color: #d84315; /* Adjust to a suitable active color */
+  background-color: #d84315;
 }
 
 .scroll-to-top-icon {
