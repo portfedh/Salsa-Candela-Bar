@@ -15,16 +15,18 @@ const MenuContent = ({ scrollToTop, addToCart }) => (
           </a>
         </h2>
         <div className="menu-items">
-          {menuData[section].map((item, index) => (
-            <MenuItem
-              key={index}
-              itemName={item.itemName}
-              price={item.price}
-              amount={item.amount}
-              imageUrl={item.imageUrl}
-              onAddToCart={addToCart}
-            />
-          ))}
+          {menuData[section]
+            .filter((item) => item.available)
+            .map((item, index) => (
+              <MenuItem
+                key={index}
+                itemName={item.itemName}
+                price={item.price}
+                amount={item.amount}
+                imageUrl={item.imageUrl}
+                onAddToCart={addToCart}
+              />
+            ))}
         </div>
       </div>
     ))}
