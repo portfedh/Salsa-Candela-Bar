@@ -5,7 +5,7 @@ import Header from "./Header";
 import MenuContent from "./MenuContent";
 import MenuCategories from "./MenuCategories";
 
-function Menu() {
+function Menu({ onNext }) {
   const [cartItems, setCartItems] = useState(0);
 
   const addToCart = () => {
@@ -32,11 +32,16 @@ function Menu() {
   return (
     <div className="menu-container">
       <div className="menu-card">
-        <Header scrollToTop={scrollToTop} cartItems={cartItems} />
+        <Header
+          scrollToTop={scrollToTop}
+          cartItems={cartItems}
+          title={"Menu"}
+          icon={true}
+        />
         <MenuCategories scrollToSection={scrollToSection} />
         <MenuContent scrollToTop={scrollToTop} addToCart={addToCart} />
         <div className="go-to-cart">
-          <button className="go-to-cart-button" onClick={addToCart}>
+          <button className="go-to-cart-button" onClick={onNext}>
             Ir a carrito
           </button>
         </div>

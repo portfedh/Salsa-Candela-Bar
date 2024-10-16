@@ -2,6 +2,7 @@ import { useState } from "react";
 import WelcomeScreen from "./components/WelcomeScreen";
 import PromotionsMessage from "./components/PromotionsMessage";
 import Menu from "./components/Menu";
+import Cart from "./components/Cart";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState(0);
@@ -17,7 +18,11 @@ function App() {
     },
     {
       id: "menu",
-      component: <Menu />,
+      component: <Menu onNext={() => setCurrentScreen(3)} />,
+    },
+    {
+      id: "cart",
+      component: <Cart />,
     },
   ];
 
