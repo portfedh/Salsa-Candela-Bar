@@ -1,6 +1,7 @@
 const menuData = {
   vodka: [
     {
+      id: "vodka-coca",
       itemName: "Vodka y Coca",
       price: 100,
       amount: "473ml",
@@ -8,6 +9,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "azulito",
       itemName: "Azulito",
       price: 100,
       amount: "473ml",
@@ -15,6 +17,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "vodka-jugo",
       itemName: "Vodka y Jugo",
       price: 100,
       amount: "473ml",
@@ -24,6 +27,7 @@ const menuData = {
   ],
   ron: [
     {
+      id: "ron-coca",
       itemName: "Ron y Coca",
       price: 100,
       amount: "473ml",
@@ -31,6 +35,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "mojito",
       itemName: "Mojito",
       price: 100,
       amount: "473ml",
@@ -38,6 +43,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "mojito-mango",
       itemName: "Mojito Mango",
       price: 100,
       amount: "473ml",
@@ -45,6 +51,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "pina-colada",
       itemName: "Piña Colada",
       price: 100,
       amount: "473ml",
@@ -54,6 +61,7 @@ const menuData = {
   ],
   tequila: [
     {
+      id: "teq-coca",
       itemName: "Tequila y Coca",
       price: 100,
       amount: "473ml",
@@ -61,6 +69,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "teq-squirt",
       itemName: "Tequila Squirt",
       price: 100,
       amount: "473ml",
@@ -68,6 +77,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "cantarito",
       itemName: "Cantarito",
       price: 100,
       amount: "473ml",
@@ -77,6 +87,7 @@ const menuData = {
   ],
   whiskey: [
     {
+      id: "whis-coca",
       itemName: "Whiskey y Coca-Cola",
       price: 100,
       amount: "473ml",
@@ -84,6 +95,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "whis-manz",
       itemName: "Whiskey y Manzana",
       price: 100,
       amount: "473ml",
@@ -91,6 +103,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "whis-agua",
       itemName: "Whiskey y Agua Mineral",
       price: 100,
       amount: "473ml",
@@ -100,6 +113,7 @@ const menuData = {
   ],
   cervezas: [
     {
+      id: "heineken",
       itemName: "Heineken",
       price: 50,
       amount: "473ml",
@@ -107,6 +121,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "corona",
       itemName: "Corona",
       price: 50,
       amount: "473ml",
@@ -114,6 +129,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "victoria",
       itemName: "Victoria",
       price: 50,
       amount: "473ml",
@@ -123,6 +139,7 @@ const menuData = {
   ],
   refrescos: [
     {
+      id: "coca",
       itemName: "Coca Cola",
       price: 30,
       amount: "473ml",
@@ -130,6 +147,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "sprite",
       itemName: "Sprite",
       price: 30,
       amount: "473ml",
@@ -137,6 +155,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "squirt",
       itemName: "Squirt",
       price: 30,
       amount: "473ml",
@@ -144,6 +163,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "manzanita",
       itemName: "Manzanita",
       price: 30,
       amount: "473ml",
@@ -153,6 +173,7 @@ const menuData = {
   ],
   mocteles: [
     {
+      id: "min-limon",
       itemName: "Agua Mineral, Limón y Sal",
       price: 50,
       amount: "473ml",
@@ -160,6 +181,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "min-jugo",
       itemName: "Agua Mineral y Jugo",
       price: 50,
       amount: "473ml",
@@ -167,6 +189,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "moj-sin",
       itemName: "Mojito Sin Alcohol",
       price: 50,
       amount: "473ml",
@@ -174,6 +197,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "azu-sin",
       itemName: "Azulito Sin Alcohol",
       price: 50,
       amount: "473ml",
@@ -183,6 +207,7 @@ const menuData = {
   ],
   jugos: [
     {
+      id: "j-naranja",
       itemName: "Jugo Naranja",
       price: 30,
       amount: "473ml",
@@ -190,6 +215,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "j-manzana",
       itemName: "Jugo Manzana",
       price: 30,
       amount: "473ml",
@@ -197,6 +223,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "j-uva",
       itemName: "Jugo Uva",
       price: 30,
       amount: "473ml",
@@ -204,6 +231,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "j-mango",
       itemName: "Jugo Mango",
       price: 30,
       amount: "473ml",
@@ -211,6 +239,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "j-pina",
       itemName: "Jugo Piña",
       price: 30,
       amount: "473ml",
@@ -218,6 +247,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "j-durazno",
       itemName: "Jugo Durazno",
       price: 30,
       amount: "473ml",
@@ -225,6 +255,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "j-pina-coco",
       itemName: "Jugo Piña Coco",
       price: 30,
       amount: "473ml",
@@ -234,6 +265,7 @@ const menuData = {
   ],
   aguas: [
     {
+      id: "agua",
       itemName: "Agua",
       price: 20,
       amount: "473ml",
@@ -241,6 +273,7 @@ const menuData = {
       available: true,
     },
     {
+      id: "mineral",
       itemName: "Agua Mineral",
       price: 30,
       amount: "473ml",
@@ -250,6 +283,7 @@ const menuData = {
   ],
   botanas: [
     {
+      id: "chicharron",
       itemName: "Chicharrones",
       price: 20,
       amount: "473ml",
