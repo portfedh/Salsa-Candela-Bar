@@ -7,22 +7,30 @@ import Cart from "./components/Cart";
 function App() {
   const [currentScreen, setCurrentScreen] = useState(0);
 
+  const handleFwd = () => {
+    setCurrentScreen(currentScreen + 1);
+  };
+
+  const handleBack = () => {
+    setCurrentScreen(currentScreen - 1);
+  };
+
   const screens = [
     {
       id: "welcome",
-      component: <WelcomeScreen onNext={() => setCurrentScreen(1)} />,
+      component: <WelcomeScreen onNext={handleFwd} />,
     },
     {
       id: "promotions",
-      component: <PromotionsMessage onNext={() => setCurrentScreen(2)} />,
+      component: <PromotionsMessage onNext={handleFwd} />,
     },
     {
       id: "menu",
-      component: <Menu onNext={() => setCurrentScreen(3)} />,
+      component: <Menu onNext={handleFwd} />,
     },
     {
       id: "cart",
-      component: <Cart />,
+      component: <Cart onBack={handleBack} onNext={handleFwd} />,
     },
   ];
 
