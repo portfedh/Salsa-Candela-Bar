@@ -36,7 +36,6 @@ function Menu({ onNext }) {
           scrollToTop={scrollToTop}
           cartItems={cartItems}
           title={"Menu"}
-          icon={true}
         />
         <MenuCategories scrollToSection={scrollToSection} />
         <MenuContent scrollToTop={scrollToTop} addToCart={addToCart} />

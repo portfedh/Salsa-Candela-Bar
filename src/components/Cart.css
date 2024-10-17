@@ -34,6 +34,7 @@ html {
   background-color: white;
   padding: 0.1rem;
   z-index: 10;
+  display: flex;
 }
 
 .go-to-cart-button {
@@ -45,8 +46,16 @@ html {
   font-size: 1rem;
   padding: 0.5rem 2rem;
   transition: background-color 0.3s;
-  width: calc(100% - 2rem); /* Adjust width to account for margins */
-  margin: 1rem;
+  /* width: calc(100% - 2rem); */
+  margin: 0.5rem;
+}
+
+.back-button {
+  flex: 1;
+}
+
+.payment-button {
+  flex: 2;
 }
 
 .go-to-cart-button:active {

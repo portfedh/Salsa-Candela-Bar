@@ -2,7 +2,7 @@ import "./Header.css";
 import CartIcon from "./CartIcon";
 import PropTypes from "prop-types";
 
-const Header = ({ scrollToTop, cartItems, title, icon }) => (
+const Header = ({ scrollToTop, cartItems, title }) => (
   <div className="header">
     <div className="logo">
       <img className="logo-image" src="favicon.png" alt="Salsa Candela Logo" />
@@ -12,7 +12,7 @@ const Header = ({ scrollToTop, cartItems, title, icon }) => (
         {title}
       </a>
     </h1>
-    <div style={{ visibility: icon ? "visible" : "hidden" }}>
+    <div>
       <CartIcon cartCount={cartItems} />
     </div>
   </div>
@@ -22,7 +22,6 @@ Header.propTypes = {
   scrollToTop: PropTypes.func.isRequired,
   cartItems: PropTypes.number.isRequired,
   title: PropTypes.number.isRequired,
-  icon: PropTypes.bool.isRequired,
 };
 
 export default Header;
