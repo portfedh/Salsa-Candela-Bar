@@ -1,4 +1,4 @@
-import "./PromotionsMessage.css";
+import "./styles/PromotionsMessage.css";
 import PropTypes from "prop-types";
 
 function PromotionsMessage({ onNext }) {

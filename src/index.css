@@ -1,4 +1,4 @@
-/* Import Sora font from Google Fonts */
+/* Sora Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
 
 :root {
@@ -15,4 +15,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

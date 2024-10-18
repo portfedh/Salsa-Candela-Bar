@@ -1,4 +1,4 @@
-import "./WelcomeScreen.css";
+import "./styles/WelcomeScreen.css";
 import PropTypes from "prop-types";
 
 function WelcomeScreen({ onNext }) {
