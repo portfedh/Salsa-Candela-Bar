@@ -8,6 +8,7 @@ const CartItem = ({
   imageUrl,
   onAddToCart,
   onSubtractFromCart,
+  onRemoveFromCart,
 }) => {
   return (
     <div className="cart-menu-item">
@@ -24,7 +25,9 @@ const CartItem = ({
           <button onClick={onAddToCart}>+</button>
         </div>
 
-        <button className="cart-menu-remove">Eliminar</button>
+        <button className="cart-menu-remove" onClick={onRemoveFromCart}>
+          Eliminar
+        </button>
       </div>
     </div>
   );
@@ -37,6 +40,7 @@ CartItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   onAddToCart: PropTypes.func.isRequired,
   onSubtractFromCart: PropTypes.func.isRequired,
+  onRemoveFromCart: PropTypes.func.isRequired,
 };
 
 export default CartItem;

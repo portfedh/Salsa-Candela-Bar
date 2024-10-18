@@ -36,6 +36,12 @@ function Cart({ onBack }) {
     console.log("Updated cart items:", cartItems);
   };
 
+  const removeFromCart = (id) => {
+    const item = cartItems.find((item) => item.id === id);
+    setTotalCartItems(totalCartItems - item.quantity);
+    setCartItems(cartItems.filter((item) => item.id !== id));
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -61,6 +67,7 @@ function Cart({ onBack }) {
             imageUrl={item.imageUrl}
             onAddToCart={() => addToCart(item.id)}
             onSubtractFromCart={() => subtractFromCart(item.id)}
+            onRemoveFromCart={() => removeFromCart(item.id)}
           />
         ))}
         <p className="cart-subtotal">Subtotal: ${calculateSubtotal()}</p>
