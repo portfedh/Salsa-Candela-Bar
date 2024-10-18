@@ -20,10 +20,12 @@ const MenuContent = ({ scrollToTop, addToCart }) => (
             .map((item, index) => (
               <MenuItem
                 key={index}
+                id={item.id}
                 itemName={item.itemName}
                 price={item.price}
                 amount={item.amount}
                 imageUrl={item.imageUrl}
+                available={item.available}
                 onAddToCart={addToCart}
               />
             ))}
