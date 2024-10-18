@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
 import "./CartItem.css";
 
-const MenuItem = ({ itemName, price, amount, imageUrl, onAddToCart }) => {
+const MenuItem = ({
+  itemName,
+  price,
+  amount,
+  imageUrl,
+  onAddToCart,
+  onRemoveFromCart,
+}) => {
   return (
     <div className="cart-menu-item">
       <div className="cart-menu-image">
@@ -12,7 +19,7 @@ const MenuItem = ({ itemName, price, amount, imageUrl, onAddToCart }) => {
         <p>${price}</p>
 
         <div className="cart-menu-controls">
-          <button onClick={onAddToCart}>-</button>
+          <button onClick={onRemoveFromCart}>-</button>
           <p>{amount}</p>
           <button onClick={onAddToCart}>+</button>
         </div>
@@ -29,6 +36,7 @@ MenuItem.propTypes = {
   amount: PropTypes.func.isRequired,
   imageUrl: PropTypes.func.isRequired,
   onAddToCart: PropTypes.func.isRequired,
+  onRemoveFromCart: PropTypes.func.isRequired,
 };
 
 export default MenuItem;

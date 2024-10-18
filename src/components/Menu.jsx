@@ -1,15 +1,17 @@
 import "./Menu.css";
-import { useState } from "react";
+import { useContext } from "react";
+import { Context } from "../App";
 import PropTypes from "prop-types";
 import Header from "./Header";
 import MenuContent from "./MenuContent";
 import MenuCategories from "./MenuCategories";
 
 function Menu({ onNext }) {
-  const [cartItems, setCartItems] = useState(0);
+  const [totalCartItems, setTotalCartItems] = useContext(Context);
+  // const [cartItems, setCartItems] = useContext(Context);
 
   const addToCart = () => {
-    setCartItems(cartItems + 1);
+    setTotalCartItems(totalCartItems + 1);
   };
 
   const scrollToTop = () => {
@@ -34,7 +36,7 @@ function Menu({ onNext }) {
       <div className="menu-card">
         <Header
           scrollToTop={scrollToTop}
-          cartItems={cartItems}
+          cartItems={totalCartItems}
           title={"Menu"}
         />
         <MenuCategories scrollToSection={scrollToSection} />

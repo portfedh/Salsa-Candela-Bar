@@ -1,5 +1,6 @@
 import "./Cart.css";
-import { useState } from "react";
+import { useContext } from "react";
+import { Context } from "../App";
 import PropTypes from "prop-types";
 import Header from "./Header";
 import CartItem from "./CartItem";
@@ -27,10 +28,14 @@ const sampleData3 = {
 };
 
 function Cart({ onBack }) {
-  const [cartItems, setCartItems] = useState(0);
+  const [totalCartItems, setTotalCartItems] = useContext(Context);
 
   const addToCart = () => {
-    setCartItems(cartItems + 1);
+    setTotalCartItems(totalCartItems + 1);
+  };
+
+  const removeFromCart = () => {
+    setTotalCartItems(totalCartItems > 0 ? totalCartItems - 1 : 0);
   };
 
   const scrollToTop = () => {
@@ -42,7 +47,7 @@ function Cart({ onBack }) {
       <div className="menu-card">
         <Header
           scrollToTop={scrollToTop}
-          cartItems={cartItems}
+          cartItems={totalCartItems}
           title={"Carrito"}
         />
         <CartItem
@@ -50,21 +55,24 @@ function Cart({ onBack }) {
           price={sampleData.price}
           amount={sampleData.amount}
           imageUrl={sampleData.imageUrl}
-          onAddToCart={sampleData.onAddToCart}
+          onAddToCart={addToCart}
+          onRemoveFromCart={removeFromCart}
         />
         <CartItem
           itemName={sampleData2.itemName}
           price={sampleData2.price}
           amount={sampleData2.amount}
           imageUrl={sampleData2.imageUrl}
-          onAddToCart={sampleData2.onAddToCart}
+          onAddToCart={addToCart}
+          onRemoveFromCart={removeFromCart}
         />
         <CartItem
           itemName={sampleData3.itemName}
           price={sampleData3.price}
           amount={sampleData3.amount}
           imageUrl={sampleData3.imageUrl}
-          onAddToCart={sampleData3.onAddToCart}
+          onAddToCart={addToCart}
+          onRemoveFromCart={removeFromCart}
         />
 
         <p className="cart-subtotal">Subtotal: $250</p>

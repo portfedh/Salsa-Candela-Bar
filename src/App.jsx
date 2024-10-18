@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import WelcomeScreen from "./components/WelcomeScreen";
 import PromotionsMessage from "./components/PromotionsMessage";
 import Menu from "./components/Menu";
 import Cart from "./components/Cart";
 
+export const Context = createContext();
+
 function App() {
   const [currentScreen, setCurrentScreen] = useState(0);
+  const [totalCartItems, setTotalCartItems] = useState(0);
+  // const [cartItems, setCartItems] = useState([]);
 
   const handleFwd = () => {
     setCurrentScreen(currentScreen + 1);
@@ -34,7 +38,11 @@ function App() {
     },
   ];
 
-  return <div>{screens[currentScreen].component}</div>;
+  return (
+    <Context.Provider value={[totalCartItems, setTotalCartItems]}>
+      {screens[currentScreen].component}
+    </Context.Provider>
+  );
 }
 
 export default App;
