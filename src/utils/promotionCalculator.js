@@ -1,9 +1,11 @@
 export class PromotionCalculator {
   static calculateQuantityDiscount(cart, promotion) {
+    // Filter items in the cart that belong to promotion's category
     const eligibleItems = cart.items.filter(
       (item) => item.categoryId === promotion.categoryId
     );
 
+    // Calculate quantity of the eligible items
     const totalQuantity = eligibleItems.reduce(
       (sum, item) => sum + item.quantity,
       0
@@ -14,13 +16,16 @@ export class PromotionCalculator {
       .filter((rule) => totalQuantity >= rule.minQuantity)
       .sort((a, b) => b.discount - a.discount)[0];
 
+    // / If no applicable rule is found, return discount of 0
     if (!applicableRule) return 0;
 
+    // Calculate the subtotal for the eligible items in the category
     const subtotalForCategory = eligibleItems.reduce(
       (sum, item) => sum + item.price * item.quantity,
       0
     );
 
+    // Return the discount amount by applying the highest applicable discount to the subtotal
     return subtotalForCategory * applicableRule.discount;
   }
 
