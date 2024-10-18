@@ -5,35 +5,36 @@ import PropTypes from "prop-types";
 import Header from "./Header";
 import CartItem from "./CartItem";
 
-const sampleData = {
-  itemName: "Victoria",
-  price: 50,
-  imageUrl: "/img/victoria-240x240.webp",
-};
-const sampleData2 = {
-  itemName: "Azulito",
-  price: 100,
-  imageUrl: "/img/azulito-240x240.webp",
-};
-const sampleData3 = {
-  itemName: "Mojito",
-  price: 100,
-  imageUrl: "/img/mojito-240x240.webp",
-};
-
 function Cart({ onBack }) {
-  const [totalCartItems, setTotalCartItems] = useContext(Context);
+  const [totalCartItems, setTotalCartItems, cartItems, setCartItems] =
+    useContext(Context);
 
-  const addToCart = () => {
+  const addToCart = (id) => {
     setTotalCartItems(totalCartItems + 1);
+    setCartItems(
+      cartItems.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
   };
 
-  const removeFromCart = () => {
+  const removeFromCart = (id) => {
     setTotalCartItems(totalCartItems > 0 ? totalCartItems - 1 : 0);
+    setCartItems(
+      cartItems.map((item) =>
+        item.id === id && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
   };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const calculateSubtotal = () => {
+    return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   };
 
   return (
@@ -44,40 +45,25 @@ function Cart({ onBack }) {
           cartItems={totalCartItems}
           title={"Carrito"}
         />
-        <CartItem
-          itemName={sampleData.itemName}
-          price={sampleData.price}
-          amount={"1"}
-          imageUrl={sampleData.imageUrl}
-          onAddToCart={addToCart}
-          onRemoveFromCart={removeFromCart}
-        />
-        <CartItem
-          itemName={sampleData2.itemName}
-          price={sampleData2.price}
-          amount={"1"}
-          imageUrl={sampleData2.imageUrl}
-          onAddToCart={addToCart}
-          onRemoveFromCart={removeFromCart}
-        />
-        <CartItem
-          itemName={sampleData3.itemName}
-          price={sampleData3.price}
-          amount={"1"}
-          imageUrl={sampleData3.imageUrl}
-          onAddToCart={addToCart}
-          onRemoveFromCart={removeFromCart}
-        />
-
-        <p className="cart-subtotal">Subtotal: $250</p>
-
+        {cartItems.map((item) => (
+          <CartItem
+            key={item.id}
+            itemName={item.itemName}
+            price={item.price}
+            amount={item.quantity}
+            imageUrl={item.imageUrl}
+            onAddToCart={() => addToCart(item.id)}
+            onRemoveFromCart={() => removeFromCart(item.id)}
+          />
+        ))}
+        <p className="cart-subtotal">Subtotal: ${calculateSubtotal()}</p>
         <div className="go-to-cart">
           <button className="go-to-cart-button back-button" onClick={onBack}>
             Atrás
           </button>
           <button
             className="go-to-cart-button payment-button"
-            onClick={addToCart}
+            onClick={() => alert("Proceed to payment")}
           >
             Pagar
           </button>

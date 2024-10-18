@@ -7,7 +7,21 @@ const MenuItem = ({ id, itemName, price, amount, imageUrl, onAddToCart }) => {
   const [, , cartItems, setCartItems] = useContext(Context);
 
   const handleAddToCart = () => {
-    setCartItems([...cartItems, { id, itemName, price, amount, quantity: 1 }]);
+    const existingItem = cartItems.find((item) => item.id === id);
+
+    if (existingItem) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        )
+      );
+    } else {
+      setCartItems([
+        ...cartItems,
+        { id, itemName, price, amount, imageUrl, quantity: 1 },
+      ]);
+    }
+
     onAddToCart();
     console.log("Updated Cart Items:", cartItems);
   };
