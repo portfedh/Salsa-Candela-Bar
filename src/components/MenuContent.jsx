@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
 import MenuItem from "./MenuItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
 import menuData from "../utils/menuData";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MenuContent = ({ scrollToTop, addToCart }) => (
   <div className="menu-content">
