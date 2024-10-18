@@ -1,4 +1,4 @@
-import "./MenuItem.css";
+import "./styles/MenuItem.css";
 import { Context } from "../App";
 import { useContext } from "react";
 import PropTypes from "prop-types";

@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./styles/Header.css";
 import CartIcon from "./CartIcon";
 import PropTypes from "prop-types";
 

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./CartItem.css";
+import "./styles/CartItem.css";
 
 const CartItem = ({
   itemName,
