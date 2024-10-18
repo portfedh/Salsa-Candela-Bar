@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import "./CartItem.css";
 
-const MenuItem = ({
+const CartItem = ({
   itemName,
   price,
   amount,
   imageUrl,
   onAddToCart,
-  onRemoveFromCart,
+  onSubtractFromCart,
 }) => {
   return (
     <div className="cart-menu-item">
@@ -19,7 +19,7 @@ const MenuItem = ({
         <p>${price}</p>
 
         <div className="cart-menu-controls">
-          <button onClick={onRemoveFromCart}>-</button>
+          <button onClick={onSubtractFromCart}>-</button>
           <p>{amount}</p>
           <button onClick={onAddToCart}>+</button>
         </div>
@@ -30,13 +30,13 @@ const MenuItem = ({
   );
 };
 
-MenuItem.propTypes = {
+CartItem.propTypes = {
   itemName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  amount: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
   imageUrl: PropTypes.string.isRequired,
   onAddToCart: PropTypes.func.isRequired,
-  onRemoveFromCart: PropTypes.func.isRequired,
+  onSubtractFromCart: PropTypes.func.isRequired,
 };
 
-export default MenuItem;
+export default CartItem;

@@ -18,15 +18,22 @@ function Cart({ onBack }) {
     );
   };
 
-  const removeFromCart = (id) => {
-    setTotalCartItems(totalCartItems > 0 ? totalCartItems - 1 : 0);
-    setCartItems(
-      cartItems.map((item) =>
-        item.id === id && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-    );
+  const subtractFromCart = (id) => {
+    console.log("Removing item with id:", id);
+    const item = cartItems.find((item) => item.id === id);
+    console.log("Item found:", item);
+    if (item.quantity > 1) {
+      setTotalCartItems(totalCartItems - 1);
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+      );
+    } else {
+      setTotalCartItems(totalCartItems - 1);
+      setCartItems(cartItems.filter((item) => item.id !== id));
+    }
+    console.log("Updated cart items:", cartItems);
   };
 
   const scrollToTop = () => {
@@ -53,7 +60,7 @@ function Cart({ onBack }) {
             amount={item.quantity}
             imageUrl={item.imageUrl}
             onAddToCart={() => addToCart(item.id)}
-            onRemoveFromCart={() => removeFromCart(item.id)}
+            onSubtractFromCart={() => subtractFromCart(item.id)}
           />
         ))}
         <p className="cart-subtotal">Subtotal: ${calculateSubtotal()}</p>

@@ -23,7 +23,6 @@ const MenuItem = ({ id, itemName, price, amount, imageUrl, onAddToCart }) => {
     }
 
     onAddToCart();
-    console.log("Updated Cart Items:", cartItems);
   };
 
   return (
