@@ -5,7 +5,7 @@ export const promotionRules = [
   {
     id: "BEER_QUANTITY_DISCOUNT",
     type: PROMOTION_TYPES.QUANTITY_DISCOUNT,
-    categoryId: "cervezas",
+    categoryId: "cerveza",
     rules: [
       { minQuantity: 2, discount: 0.1 },
       { minQuantity: 3, discount: 0.2 },

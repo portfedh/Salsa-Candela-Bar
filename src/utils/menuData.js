@@ -7,6 +7,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/vodka-coca-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "azulito",
@@ -15,6 +16,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/azulito-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "vodka-jugo",
@@ -23,6 +25,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/vodka-jugo-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
   ],
   ron: [
@@ -33,6 +36,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/ron-coca-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "mojito",
@@ -41,6 +45,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/mojito-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "mojito-mango",
@@ -49,6 +54,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/mojito-mango-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "pina-colada",
@@ -57,6 +63,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/pina-colada-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
   ],
   tequila: [
@@ -67,6 +74,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/tequila-coca-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "teq-squirt",
@@ -75,6 +83,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/tequila-squirt-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "cantarito",
@@ -83,6 +92,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/cantarito-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
   ],
   whiskey: [
@@ -93,6 +103,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/whiskey-coca-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "whis-manz",
@@ -101,6 +112,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/whiskey-manzana-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
     {
       id: "whis-agua",
@@ -109,6 +121,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/whiskey-agua-240x240.webp",
       available: true,
+      categoryId: "coctel",
     },
   ],
   cervezas: [
@@ -119,6 +132,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/heineken-240x240.webp",
       available: true,
+      categoryId: "cerveza",
     },
     {
       id: "corona",
@@ -127,6 +141,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/corona-240x240.webp",
       available: true,
+      categoryId: "cerveza",
     },
     {
       id: "victoria",
@@ -135,6 +150,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/victoria-240x240.webp",
       available: true,
+      categoryId: "cerveza",
     },
   ],
   refrescos: [
@@ -145,6 +161,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/coca-cola-240x240.webp",
       available: true,
+      categoryId: "refresco",
     },
     {
       id: "sprite",
@@ -153,6 +170,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/sprite-240x240.webp",
       available: true,
+      categoryId: "refresco",
     },
     {
       id: "squirt",
@@ -161,6 +179,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/squirt-240x240.webp",
       available: true,
+      categoryId: "refresco",
     },
     {
       id: "manzanita",
@@ -169,6 +188,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/manzanita-240x240.jpg",
       available: true,
+      categoryId: "refresco",
     },
   ],
   mocteles: [
@@ -179,6 +199,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/agua-mineral-limon-sal-240x240.jpg",
       available: true,
+      categoryId: "moctel",
     },
     {
       id: "min-jugo",
@@ -187,6 +208,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/agua-mineral-jugo-240x240.png",
       available: true,
+      categoryId: "moctel",
     },
     {
       id: "moj-sin",
@@ -195,6 +217,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/mojito-240x240.webp",
       available: true,
+      categoryId: "moctel",
     },
     {
       id: "azu-sin",
@@ -203,6 +226,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/azulito-240x240.webp",
       available: true,
+      categoryId: "moctel",
     },
   ],
   jugos: [
@@ -213,6 +237,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/jumex-naranja-240x240.jpg",
       available: true,
+      categoryId: "jugo",
     },
     {
       id: "j-manzana",
@@ -221,6 +246,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/jumex-manzana-240x240.jpg",
       available: true,
+      categoryId: "jugo",
     },
     {
       id: "j-uva",
@@ -229,6 +255,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/jumex-uva-240x240.jpg",
       available: true,
+      categoryId: "jugo",
     },
     {
       id: "j-mango",
@@ -237,6 +264,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/jumex-mango-240x240.jpg",
       available: true,
+      categoryId: "jugo",
     },
     {
       id: "j-pina",
@@ -245,6 +273,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/jumex-pina-240x240.jpg",
       available: true,
+      categoryId: "jugo",
     },
     {
       id: "j-durazno",
@@ -253,6 +282,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/jumex-durazno-240x240.jpg",
       available: true,
+      categoryId: "jugo",
     },
     {
       id: "j-pina-coco",
@@ -261,6 +291,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/jumex-pina-coco-240x240.jpg",
       available: true,
+      categoryId: "jugo",
     },
   ],
   aguas: [
@@ -271,6 +302,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/ciel-240x240.jpg",
       available: true,
+      categoryId: "agua",
     },
     {
       id: "mineral",
@@ -279,6 +311,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/penafiel-240x240.webp",
       available: true,
+      categoryId: "agua",
     },
   ],
   botanas: [
@@ -289,6 +322,7 @@ const menuData = {
       amount: "473ml",
       imageUrl: "/img/chicharron-240x240.png",
       available: true,
+      categoryId: "botana",
     },
   ],
 };
