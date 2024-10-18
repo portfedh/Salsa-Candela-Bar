@@ -8,23 +8,17 @@ import CartItem from "./CartItem";
 const sampleData = {
   itemName: "Victoria",
   price: 50,
-  amount: 1,
   imageUrl: "/img/victoria-240x240.webp",
-  onAddToCart: () => console.log("Added to cart"),
 };
 const sampleData2 = {
   itemName: "Azulito",
   price: 100,
-  amount: 1,
   imageUrl: "/img/azulito-240x240.webp",
-  onAddToCart: () => console.log("Added to cart"),
 };
 const sampleData3 = {
   itemName: "Mojito",
   price: 100,
-  amount: 1,
   imageUrl: "/img/mojito-240x240.webp",
-  onAddToCart: () => console.log("Added to cart"),
 };
 
 function Cart({ onBack }) {
@@ -53,7 +47,7 @@ function Cart({ onBack }) {
         <CartItem
           itemName={sampleData.itemName}
           price={sampleData.price}
-          amount={sampleData.amount}
+          amount={"1"}
           imageUrl={sampleData.imageUrl}
           onAddToCart={addToCart}
           onRemoveFromCart={removeFromCart}
@@ -61,7 +55,7 @@ function Cart({ onBack }) {
         <CartItem
           itemName={sampleData2.itemName}
           price={sampleData2.price}
-          amount={sampleData2.amount}
+          amount={"1"}
           imageUrl={sampleData2.imageUrl}
           onAddToCart={addToCart}
           onRemoveFromCart={removeFromCart}
@@ -69,7 +63,7 @@ function Cart({ onBack }) {
         <CartItem
           itemName={sampleData3.itemName}
           price={sampleData3.price}
-          amount={sampleData3.amount}
+          amount={"1"}
           imageUrl={sampleData3.imageUrl}
           onAddToCart={addToCart}
           onRemoveFromCart={removeFromCart}

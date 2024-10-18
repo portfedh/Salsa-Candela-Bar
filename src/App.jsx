@@ -9,7 +9,7 @@ export const Context = createContext();
 function App() {
   const [currentScreen, setCurrentScreen] = useState(0);
   const [totalCartItems, setTotalCartItems] = useState(0);
-  // const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const handleFwd = () => {
     setCurrentScreen(currentScreen + 1);
@@ -39,7 +39,9 @@ function App() {
   ];
 
   return (
-    <Context.Provider value={[totalCartItems, setTotalCartItems]}>
+    <Context.Provider
+      value={[totalCartItems, setTotalCartItems, cartItems, setCartItems]}
+    >
       {screens[currentScreen].component}
     </Context.Provider>
   );

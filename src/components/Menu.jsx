@@ -8,7 +8,6 @@ import MenuCategories from "./MenuCategories";
 
 function Menu({ onNext }) {
   const [totalCartItems, setTotalCartItems] = useContext(Context);
-  // const [cartItems, setCartItems] = useContext(Context);
 
   const addToCart = () => {
     setTotalCartItems(totalCartItems + 1);

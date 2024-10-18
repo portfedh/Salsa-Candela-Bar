@@ -32,7 +32,7 @@ const CartIcon = ({ cartCount }) => {
 };
 
 CartIcon.propTypes = {
-  cartCount: PropTypes.func.isRequired,
+  cartCount: PropTypes.number.isRequired,
 };
 
 export default CartIcon;

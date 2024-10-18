@@ -21,7 +21,7 @@ const Header = ({ scrollToTop, cartItems, title }) => (
 Header.propTypes = {
   scrollToTop: PropTypes.func.isRequired,
   cartItems: PropTypes.number.isRequired,
-  title: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Header;

@@ -31,10 +31,10 @@ const MenuItem = ({
 };
 
 MenuItem.propTypes = {
-  itemName: PropTypes.func.isRequired,
-  price: PropTypes.func.isRequired,
-  amount: PropTypes.func.isRequired,
-  imageUrl: PropTypes.func.isRequired,
+  itemName: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   onAddToCart: PropTypes.func.isRequired,
   onRemoveFromCart: PropTypes.func.isRequired,
 };
