@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import PropTypes from "prop-types";
 
 const CheckoutButton = ({ cartItems }) => {
@@ -6,12 +6,12 @@ const CheckoutButton = ({ cartItems }) => {
     try {
       console.log("Starting checkout with items:", cartItems);
       alert("Proceed to payment");
-      // const response = await axios.post(
-      //   "https://admin.salsa-candela.com/start-checkout",
-      //   { cartItems }
-      // );
+      const response = await axios.post(
+        "https://admin.salsa-candela.com/bar-checkout",
+        { cartItems }
+      );
       // Handle the response as needed
-      // console.log(response.data);
+      console.log(response.data);
     } catch (error) {
       console.error("Error starting checkout:", error);
     }
