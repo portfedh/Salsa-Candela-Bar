@@ -4,6 +4,7 @@ import { Context } from "../App";
 import PropTypes from "prop-types";
 import Header from "./Header";
 import CartItem from "./CartItem";
+import CheckoutButton from "./CheckoutButton";
 
 function Cart({ onBack }) {
   const [totalCartItems, setTotalCartItems, cartItems, setCartItems] =
@@ -75,12 +76,7 @@ function Cart({ onBack }) {
           <button className="go-to-cart-button back-button" onClick={onBack}>
             Atrás
           </button>
-          <button
-            className="go-to-cart-button payment-button"
-            onClick={() => alert("Proceed to payment")}
-          >
-            Pagar
-          </button>
+          <CheckoutButton cartItems={cartItems} />
         </div>
       </div>
     </div>
