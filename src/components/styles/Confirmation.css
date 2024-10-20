@@ -1,1 +1,94 @@
 /* Confirmation.css */
+
+.confirmation-menu-container {
+  align-items: center;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.confirmation-menu-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.confirmation-logo-image {
+  width: 75px;
+  margin: 1rem 0 2rem 1rem;
+}
+
+.confirmation-menu-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 1rem;
+  text-align: center;
+}
+
+.order-receipt-instruction {
+  font-size: 1.2rem;
+  margin: 0 2rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.order-receipt-qr-code {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+}
+
+.order-receipt-id {
+  margin: 1rem 0 1rem 0;
+  text-align: center;
+}
+
+.order-receipt-date {
+  margin: 1rem 0 1rem 0;
+  text-align: center;
+}
+
+.order-receipt-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+}
+
+.order-receipt-items li {
+  text-align: left;
+  width: 60%;
+  max-width: 250px;
+  margin-bottom: 1rem;
+}
+
+.order-receipt-div {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.order-receipt-button {
+  background-color: #e65100;
+  border: none;
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.3s;
+  margin: 0.5rem;
+}
+
+.back-button {
+  flex: 1;
+}
