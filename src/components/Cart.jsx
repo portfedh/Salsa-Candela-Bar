@@ -1,12 +1,18 @@
 import "./styles/Cart.css";
 import { useContext } from "react";
 import { Context } from "../App";
-import PropTypes from "prop-types";
 import Header from "./Header";
 import CartItem from "./CartItem";
 import CheckoutButton from "./CheckoutButton";
+import { useNavigate } from "react-router-dom";
 
-function Cart({ onBack }) {
+function Cart() {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/menu");
+  };
+
   const [totalCartItems, setTotalCartItems, cartItems, setCartItems] =
     useContext(Context);
 
@@ -73,7 +79,10 @@ function Cart({ onBack }) {
         ))}
         <p className="cart-subtotal">Subtotal: ${calculateSubtotal()}</p>
         <div className="go-to-cart">
-          <button className="go-to-cart-button back-button" onClick={onBack}>
+          <button
+            className="go-to-cart-button back-button"
+            onClick={handleBack}
+          >
             Atrás
           </button>
           <CheckoutButton cartItems={cartItems} />
@@ -82,9 +91,5 @@ function Cart({ onBack }) {
     </div>
   );
 }
-
-Cart.propTypes = {
-  onBack: PropTypes.func.isRequired,
-};
 
 export default Cart;

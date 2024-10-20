@@ -1,12 +1,12 @@
 import "./styles/Menu.css";
 import { useContext } from "react";
 import { Context } from "../App";
-import PropTypes from "prop-types";
 import Header from "./Header";
 import MenuContent from "./MenuContent";
 import MenuCategories from "./MenuCategories";
+import { useNavigate } from "react-router-dom";
 
-function Menu({ onNext }) {
+function Menu() {
   const [totalCartItems, setTotalCartItems] = useContext(Context);
 
   const addToCart = () => {
@@ -30,6 +30,12 @@ function Menu({ onNext }) {
     });
   };
 
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+    navigate("/cart");
+  };
+
   return (
     <div className="menu-container">
       <div className="menu-card">
@@ -41,7 +47,7 @@ function Menu({ onNext }) {
         <MenuCategories scrollToSection={scrollToSection} />
         <MenuContent scrollToTop={scrollToTop} addToCart={addToCart} />
         <div className="go-to-cart">
-          <button className="go-to-cart-button" onClick={onNext}>
+          <button className="go-to-cart-button" onClick={handleNext}>
             Ir a carrito
           </button>
         </div>
@@ -49,9 +55,5 @@ function Menu({ onNext }) {
     </div>
   );
 }
-
-Menu.propTypes = {
-  onNext: PropTypes.func.isRequired,
-};
 
 export default Menu;

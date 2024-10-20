@@ -1,7 +1,13 @@
 import "./styles/WelcomeScreen.css";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
-function WelcomeScreen({ onNext }) {
+function WelcomeScreen() {
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+    navigate("/promotions");
+  };
+
   return (
     <div className="welcome-container">
       <div className="welcome-card">
@@ -17,16 +23,12 @@ function WelcomeScreen({ onNext }) {
             Bienvenid@ <br></br>a Salsa Candela!
           </h1>
         </div>
-        <button className="next-button" onClick={onNext}>
+        <button className="next-button" onClick={handleNext}>
           Siguiente
         </button>
       </div>
     </div>
   );
 }
-
-WelcomeScreen.propTypes = {
-  onNext: PropTypes.func.isRequired,
-};
 
 export default WelcomeScreen;

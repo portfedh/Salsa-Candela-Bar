@@ -1,7 +1,13 @@
 import "./styles/PromotionsMessage.css";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
-function PromotionsMessage({ onNext }) {
+function PromotionsMessage() {
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+    navigate("/menu");
+  };
+
   return (
     <div className="promotions-container">
       <div className="promotions-card">
@@ -38,16 +44,12 @@ function PromotionsMessage({ onNext }) {
           Las imágenes son ilustrativas.
         </p>
 
-        <button className="next-button" onClick={onNext}>
+        <button className="next-button" onClick={handleNext}>
           Siguiente
         </button>
       </div>
     </div>
   );
 }
-
-PromotionsMessage.propTypes = {
-  onNext: PropTypes.func.isRequired,
-};
 
 export default PromotionsMessage;
