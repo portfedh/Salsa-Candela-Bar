@@ -3,8 +3,9 @@ import { Context } from "../App";
 import { useContext } from "react";
 import PropTypes from "prop-types";
 
-const MenuItem = ({ id, itemName, price, amount, imageUrl, onAddToCart }) => {
-  const [, , cartItems, setCartItems] = useContext(Context);
+const MenuItem = ({ id, itemName, price, amount, imageUrl }) => {
+  const [totalCartItems, setTotalCartItems, cartItems, setCartItems] =
+    useContext(Context);
 
   const handleAddToCart = () => {
     // Find the item in the cart that matches the current item's id
@@ -30,7 +31,8 @@ const MenuItem = ({ id, itemName, price, amount, imageUrl, onAddToCart }) => {
       ]);
     }
 
-    onAddToCart();
+    // Update the total number of items in the cart for the cart icon
+    setTotalCartItems(totalCartItems + 1);
   };
 
   return (
@@ -50,7 +52,6 @@ MenuItem.propTypes = {
   price: PropTypes.number.isRequired,
   amount: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
-  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default MenuItem;

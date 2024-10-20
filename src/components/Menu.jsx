@@ -7,11 +7,7 @@ import MenuCategories from "./MenuCategories";
 import { useNavigate } from "react-router-dom";
 
 function Menu() {
-  const [totalCartItems, setTotalCartItems] = useContext(Context);
-
-  const addToCart = () => {
-    setTotalCartItems(totalCartItems + 1);
-  };
+  const [totalCartItems] = useContext(Context);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -45,7 +41,7 @@ function Menu() {
           title={"Menu"}
         />
         <MenuCategories scrollToSection={scrollToSection} />
-        <MenuContent scrollToTop={scrollToTop} addToCart={addToCart} />
+        <MenuContent scrollToTop={scrollToTop} />
         <div className="go-to-cart">
           <button className="go-to-cart-button" onClick={handleNext}>
             Ir a carrito

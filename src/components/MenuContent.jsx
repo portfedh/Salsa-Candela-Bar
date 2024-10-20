@@ -4,7 +4,7 @@ import menuData from "../utils/menuData";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const MenuContent = ({ scrollToTop, addToCart }) => (
+const MenuContent = ({ scrollToTop }) => (
   <div className="menu-content">
     {Object.keys(menuData).map((section) => (
       <div key={section} className="menu-section">
@@ -26,7 +26,6 @@ const MenuContent = ({ scrollToTop, addToCart }) => (
                 amount={item.amount}
                 imageUrl={item.imageUrl}
                 available={item.available}
-                onAddToCart={addToCart}
               />
             ))}
         </div>
@@ -37,7 +36,6 @@ const MenuContent = ({ scrollToTop, addToCart }) => (
 
 MenuContent.propTypes = {
   scrollToTop: PropTypes.func.isRequired,
-  addToCart: PropTypes.func.isRequired,
 };
 
 export default MenuContent;
