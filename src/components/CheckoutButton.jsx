@@ -1,13 +1,23 @@
 // import axios from "axios";
-// import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+// import { useNavigate } from "react-router-dom";
 
-// const CheckoutButton = ({ cartItems }) => {
-const CheckoutButton = () => {
-  const navigate = useNavigate();
+const CheckoutButton = ({ cartItems }) => {
+  // const navigate = useNavigate();
 
   const handleConfirmation = () => {
-    navigate("/confirmation");
+    console.log("items: ", cartItems);
+
+    const generateOrderNumber = () => {
+      const prefix = "order-";
+      const timestamp = Date.now().toString(36); // Base-36 timestamp
+      const randomString = Math.random().toString(36).substring(2, 8); // Random alphanumeric
+      return `${prefix}${timestamp}-${randomString}`;
+    };
+    const orderNumber = generateOrderNumber();
+    console.log(orderNumber); // Example: ORD-l1fxtq-abc123
+
+    // navigate("/confirmation");
   };
 
   // const handleCheckout = async () => {
@@ -36,8 +46,8 @@ const CheckoutButton = () => {
   );
 };
 
-// CheckoutButton.propTypes = {
-//   cartItems: PropTypes.array.isRequired,
-// };
+CheckoutButton.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+};
 
 export default CheckoutButton;

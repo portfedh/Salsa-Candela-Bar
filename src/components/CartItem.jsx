@@ -3,7 +3,7 @@ import "./styles/CartItem.css";
 
 const CartItem = ({
   itemName,
-  price,
+  unitPrice,
   amount,
   imageUrl,
   onAddToCart,
@@ -17,7 +17,7 @@ const CartItem = ({
       </div>
       <div className="cart-menu-details">
         <p>{itemName}</p>
-        <p>${price}</p>
+        <p>${unitPrice}</p>
 
         <div className="cart-menu-controls">
           <button onClick={onSubtractFromCart}>-</button>
@@ -35,7 +35,7 @@ const CartItem = ({
 
 CartItem.propTypes = {
   itemName: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  unitPrice: PropTypes.number.isRequired,
   amount: PropTypes.number.isRequired,
   imageUrl: PropTypes.string.isRequired,
   onAddToCart: PropTypes.func.isRequired,

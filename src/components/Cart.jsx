@@ -20,33 +20,33 @@ function Cart() {
     setTotalCartItems(totalCartItems + 1);
     setCartItems(
       cartItems.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        item.drinkId === id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
   };
 
   const subtractFromCart = (id) => {
     console.log("Removing item with id:", id);
-    const item = cartItems.find((item) => item.id === id);
+    const item = cartItems.find((item) => item.drinkId === id);
     console.log("Item found:", item);
     if (item.quantity > 1) {
       setTotalCartItems(totalCartItems - 1);
       setCartItems(
         cartItems.map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+          item.drinkId === id ? { ...item, quantity: item.quantity - 1 } : item
         )
       );
     } else {
       setTotalCartItems(totalCartItems - 1);
-      setCartItems(cartItems.filter((item) => item.id !== id));
+      setCartItems(cartItems.filter((item) => item.drinkId !== id));
     }
     console.log("Updated cart items:", cartItems);
   };
 
   const removeFromCart = (id) => {
-    const item = cartItems.find((item) => item.id === id);
+    const item = cartItems.find((item) => item.drinkId === id);
     setTotalCartItems(totalCartItems - item.quantity);
-    setCartItems(cartItems.filter((item) => item.id !== id));
+    setCartItems(cartItems.filter((item) => item.drinkId !== id));
   };
 
   const scrollToTop = () => {
@@ -54,7 +54,10 @@ function Cart() {
   };
 
   const calculateSubtotal = () => {
-    return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    return cartItems.reduce(
+      (acc, item) => acc + item.unitPrice * item.quantity,
+      0
+    );
   };
 
   return (
@@ -67,14 +70,14 @@ function Cart() {
         />
         {cartItems.map((item) => (
           <CartItem
-            key={item.id}
+            key={item.drinkId}
             itemName={item.itemName}
-            price={item.price}
+            unitPrice={item.unitPrice}
             amount={item.quantity}
             imageUrl={item.imageUrl}
-            onAddToCart={() => addToCart(item.id)}
-            onSubtractFromCart={() => subtractFromCart(item.id)}
-            onRemoveFromCart={() => removeFromCart(item.id)}
+            onAddToCart={() => addToCart(item.drinkId)}
+            onSubtractFromCart={() => subtractFromCart(item.drinkId)}
+            onRemoveFromCart={() => removeFromCart(item.drinkId)}
           />
         ))}
         <p className="cart-subtotal">Subtotal: ${calculateSubtotal()}</p>

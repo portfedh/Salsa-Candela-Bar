@@ -20,10 +20,10 @@ const MenuContent = ({ scrollToTop }) => (
             .map((item, index) => (
               <MenuItem
                 key={index}
-                id={item.id}
+                drinkId={item.drinkId}
                 itemName={item.itemName}
-                price={item.price}
-                amount={item.amount}
+                unitPrice={item.unitPrice}
+                volume={item.volume}
                 imageUrl={item.imageUrl}
                 available={item.available}
               />
