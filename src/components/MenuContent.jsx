@@ -26,6 +26,7 @@ const MenuContent = ({ scrollToTop }) => (
                 volume={item.volume}
                 imageUrl={item.imageUrl}
                 available={item.available}
+                categoryId={item.categoryId}
               />
             ))}
         </div>

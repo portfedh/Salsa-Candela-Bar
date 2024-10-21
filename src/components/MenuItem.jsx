@@ -3,7 +3,14 @@ import { Context } from "../App";
 import { useContext } from "react";
 import PropTypes from "prop-types";
 
-const MenuItem = ({ drinkId, itemName, unitPrice, volume, imageUrl }) => {
+const MenuItem = ({
+  drinkId,
+  itemName,
+  unitPrice,
+  volume,
+  imageUrl,
+  categoryId,
+}) => {
   const [totalCartItems, setTotalCartItems, cartItems, setCartItems] =
     useContext(Context);
 
@@ -27,7 +34,15 @@ const MenuItem = ({ drinkId, itemName, unitPrice, volume, imageUrl }) => {
       // If the item does not exist in the cart, add it with a quantity of 1
       setCartItems([
         ...cartItems,
-        { drinkId, itemName, unitPrice, volume, imageUrl, quantity: 1 },
+        {
+          drinkId,
+          itemName,
+          unitPrice,
+          volume,
+          imageUrl,
+          categoryId,
+          quantity: 1,
+        },
       ]);
     }
 
@@ -52,6 +67,7 @@ MenuItem.propTypes = {
   unitPrice: PropTypes.number.isRequired,
   volume: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
+  categoryId: PropTypes.string.isRequired,
 };
 
 export default MenuItem;
