@@ -1,10 +1,9 @@
 // src/hooks/usePromotions.js
 
-// Not real code yet, just a placeholder for the final implementation
 import { useMemo } from "react";
-import { promotionRules } from "../data/promotionRules";
+import { promotionRules } from "../utils/promotionRules";
 import { PromotionCalculator } from "../utils/promotionCalculator";
-import { PROMOTION_TYPES } from "../constants/promotionTypes";
+import { PROMOTION_TYPES } from "../utils/promotionTypes";
 
 export function usePromotions(cart) {
   const appliedDiscounts = useMemo(() => {

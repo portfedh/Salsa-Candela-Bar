@@ -18,7 +18,7 @@ export const promotionRules = [
   {
     id: "COCKTAIL_QUANTITY_DISCOUNT",
     type: PROMOTION_TYPES.QUANTITY_DISCOUNT,
-    categoryId: "vodka",
+    categoryId: "coctel",
     rules: [{ minQuantity: 2, discount: 0.1 }],
     active: true,
     startDate: "2024-10-15",
