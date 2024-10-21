@@ -78,6 +78,21 @@ function Cart() {
           cartItems={totalCartItems}
           title={"Carrito"}
         />
+        <div className="cart-promotions-section">
+          <p>Promociones Cervezas:</p>
+          <div className="cart-promotions-card">
+            <button className="cart-promotion-button"> 1 x $50</button>
+            <button className="cart-promotion-button"> 2 x $90</button>
+            <button className="cart-promotion-button"> 3 x $120</button>
+          </div>
+
+          <p>Promociones Cocteles:</p>
+          <div className="cart-promotions-card">
+            <button className="cart-promotion-button"> 1 x $100</button>
+            <button className="cart-promotion-button"> 2 x $180</button>
+          </div>
+        </div>
+
         {cartItems.map((item) => (
           <CartItem
             key={item.drinkId}
