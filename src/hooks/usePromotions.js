@@ -7,6 +7,7 @@ import { PROMOTION_TYPES } from "../utils/promotionTypes";
 
 export function usePromotions(cart) {
   const appliedDiscounts = useMemo(() => {
+    // If there are no items in the cart, return an empty array
     if (!cart?.items?.length) return [];
 
     return promotionRules

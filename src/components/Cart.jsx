@@ -5,6 +5,7 @@ import Header from "./Header";
 import CartItem from "./CartItem";
 import CheckoutButton from "./CheckoutButton";
 import { useNavigate } from "react-router-dom";
+import { usePromotions } from "../hooks/usePromotions";
 
 function Cart() {
   const navigate = useNavigate();
@@ -60,6 +61,15 @@ function Cart() {
     );
   };
 
+  const appliedDiscounts = usePromotions({ items: cartItems });
+
+  const totalDiscount = appliedDiscounts.reduce(
+    (acc, discount) => acc + discount.amount,
+    0
+  );
+
+  const total = calculateSubtotal() - totalDiscount;
+
   return (
     <div className="menu-container">
       <div className="menu-card">
@@ -81,6 +91,8 @@ function Cart() {
           />
         ))}
         <p className="cart-subtotal">Subtotal: ${calculateSubtotal()}</p>
+        <p className="cart-discount">Descuento: ${totalDiscount}</p>
+        <p className="cart-total">Total: ${total}</p>
         <div className="go-to-cart">
           <button
             className="go-to-cart-button back-button"

@@ -21,7 +21,7 @@ export class PromotionCalculator {
 
     // Calculate the subtotal for the eligible items in the category
     const subtotalForCategory = eligibleItems.reduce(
-      (sum, item) => sum + item.price * item.quantity,
+      (sum, item) => sum + item.unitPrice * item.quantity,
       0
     );
 
